@@ -8,14 +8,14 @@
 // }
 
 function findWaldo(arr, found) {
-  arr.forEach(function(person) {
+  arr.forEach(function(person, index) {
     if (person === "Waldo") {
-      found(person);   // execute callback
+      found(person, index);   // execute callback
     }
   });
 }
 
-function actionWhenFound(index) {
+function actionWhenFound(element, index) {
   console.log("Found him at index " + index + "!");
 }
 
